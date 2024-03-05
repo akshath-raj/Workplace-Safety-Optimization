@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "author": "Keyur Joshi",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 157.45, "left": -33.64, "attrs": {} },
+    {
+      "type": "wokwi-max7219-matrix",
+      "id": "matrix1",
+      "top": -86.47,
+      "left": -59.76,
+      "attrs": { "chain": "4" }
+    },
+    {
+      "type": "wokwi-ntc-temperature-sensor",
+      "id": "ntc1",
+      "top": 148.32,
+      "left": -228.74,
+      "attrs": {}
+    }
+  ],
+  "connections": [
+    [ "matrix1:V+", "uno:5V", "green", [ "h118.99", "v532.17", "h-48.27" ] ],
+    [ "matrix1:GND", "uno:GND.2", "black", [ "h112.42", "v515.21", "h-252.66" ] ],
+    [ "matrix1:DIN", "uno:11", "green", [ "h99.02", "v200.31", "h-270.09" ] ],
+    [ "matrix1:CLK", "uno:13", "green", [ "h62.72", "v164.56", "h-253.74" ] ],
+    [ "ntc1:VCC", "uno:5V", "red", [ "h39.8", "v274.63", "h184.53" ] ],
+    [ "ntc1:GND", "uno:GND.2", "black", [ "h51.02", "v258.04", "h192.02" ] ],
+    [ "matrix1:CS", "uno:10", "green", [ "h75.85", "v182.31", "h-233.28" ] ],
+    [ "ntc1:OUT", "uno:A0", "green", [ "h29.2", "v286.11", "h257.73" ] ]
+  ],
+  "dependencies": {}
+}
